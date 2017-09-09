@@ -1,0 +1,96 @@
+<style>
+  html{
+    font-family: 'Noto Sans', sans-serif;
+  }
+  section{
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  footer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .content>.container{
+    margin-top: 10px;
+  }
+
+  .logo{
+    height: 30%;
+    width: 30%;
+    margin: 10px;
+  }
+
+
+</style>
+
+<div class="container">
+  <header>
+    <h3>CHOI</h3>
+  </header>
+  <section class="z-depth-1">
+    <ul id="tabs-swipe-demo" class="tabs">
+     <li class="tab col s4 m4 l4 xl4"><a href="#test-swipe-1">Work</a></li>
+     <li class="tab col s4 m4 l4 xl4"><a class="active"href="#test-swipe-2">Profile</a></li>
+     <li class="tab col s4 m4 l4 xl4"><a href="#test-swipe-3">Contact</a></li>
+   </ul>
+
+   <div id="test-swipe-1" class="col s12 content">
+     <div class="divider"></div>
+     <div class="row">
+       <% @posts.each do |post| %>
+         <div class="col s3 offset-s1">
+           <%= post.title %>
+           <%= image_tag post.image.url %>
+           <%= link_to "edit", home_edit_path %>
+         </div>
+       <% end %>
+     </div>
+   </div>
+
+   <div id="test-swipe-2" class="col s12 content">
+     <div class="divider"></div>
+     <div class="container">
+       <div class="row">
+         <div class="profile col s6">
+           <div class="name col s12">
+             <h6>Name :</h6>
+             <h5>CHOI HEE JAE</h5>
+           </div>
+           <div class="age col s12">
+             <h6>Age :</h6>
+             <h5>24</h5>
+           </div>
+           <div class="uni col s12">
+             <h6>University :</h6>
+             <h5>University of Seoul</h5>
+           </div>
+           <div class="major col s12">
+             <h6>Major :</h6>
+             <h5>Mathematic</h5>
+           </div>
+           <div class="city col s12">
+             <h6>City :</h6>
+             <h5>Seoul</h5>
+           </div>
+         </div>
+
+         <div class="picture col s6">
+           <img class="logo col s12" src="/assets/hcj.png" alt="hcj">
+           <img class="logo" src="/assets/liklion.jpg" alt="ll">
+           <img class="logo" src="/assets/lion.png" alt="l">
+           <img class="logo" src="/assets/rub.jpg" alt="ruby">
+         </div>
+        </div>
+     </div>
+   </div>
+
+   <div id="test-swipe-3" class="col s12 content">Contact</div>
+ </section>
+
+ <footer>
+   <%= link_to 'Bdmin', root_path %>
+   <%= link_to "New", home_new_path %>
+ </footer>
+</div>
