@@ -5,15 +5,15 @@ module HomeHelper
     
      def tag_img(str)
         if str == "ruby"
-            return '/assets/rub.jpg'
+            return 'rub.jpg'
         end
         
         if str == "illu"
-            return '/assets/ill.png'
+            return 'ill.png'
         end
         
         if str == "photo"
-            return '/assets/pho.png'
+            return 'pho.png'
         end
     end
 end
