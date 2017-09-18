@@ -21,18 +21,30 @@
     width: 30%;
     margin: 10px;
   }
+  
+  .img_notebook{
+    margin-top : 60px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .img_phone{
+    margin-top : 60px;
+    width: 100%;
+    height: auto;
+  }
 
 
 </style>
 
 <div class="container">
-  <header>
-    <h3>CHOI</h3>
+  <header class="col s4 offset-s4">
+    <h3>WorkFolio</h3>
   </header>
   <section class="z-depth-1">
     <ul id="tabs-swipe-demo" class="tabs">
-     <li class="tab col s4 m4 l4 xl4"><a href="#test-swipe-1">Work</a></li>
-     <li class="tab col s4 m4 l4 xl4"><a class="active"href="#test-swipe-2">Profile</a></li>
+     <li class="tab col s4 m4 l4 xl4"><a class="active" href="#test-swipe-1">Work</a></li>
+     <li class="tab col s4 m4 l4 xl4"><a href="#test-swipe-2">Profile</a></li>
      <li class="tab col s4 m4 l4 xl4"><a href="#test-swipe-3">Contact</a></li>
    </ul>
 
@@ -40,15 +52,20 @@
      <div class="divider"></div>
      <div class="row">
        <% @posts.each do |post| %>
-         <div class="col s3 offset-s1">
-           <%= post.title %>
-           <%= image_tag post.image.url %>
-           <%= link_to "edit", home_edit_path %>
-         </div>
+         <% if post.image_type == "notebook" %>
+             <div class="col s10 offset-s1">
+                <a class="waves-effect waves-light modal-trigger" href="#modal<%= post.id %>"><%= image_tag img(post.id).first.image, :class => "img_notebook" %> </a>
+             </div>
+         <% else %>
+             <div class="col s3 offset-s2">    
+                <a class="waves-effect waves-light modal-trigger" href="#modal<%= post.id %>"><%= image_tag img(post.id).first.image, :class => "img_phone" %> </a> 
+             </div>    
+         <% end %>
+           <%= link_to 'edit', edit_post_path(post) %>
        <% end %>
      </div>
    </div>
-
+    
    <div id="test-swipe-2" class="col s12 content">
      <div class="divider"></div>
      <div class="container">
@@ -86,11 +103,28 @@
      </div>
    </div>
 
-   <div id="test-swipe-3" class="col s12 content">Contact</div>
+   <div id="test-swipe-3" class="col s12 content">
+       <div class="divider"></div>
+       <div class="container">
+           <div class="content" style="display:flex; flex-direction:column; justify-content:space-between;">
+               <div class="email" style="margin : 10px">
+                   E-mail : <a href="mailto:gmlwo530@google.com">gmlwo530@google.com</a>
+               </div>
+               <div class="ph" style="margin : 10px 10px 20px 10px">
+                   Phone Number : 010-4919-6651
+               </div>
+           </div>
+       </div>
+   </div>
  </section>
 
  <footer>
-   <%= link_to 'Bdmin', root_path %>
-   <%= link_to "New", home_new_path %>
+   <%= link_to 'Log Out', session_destroy_path ,method: :delete %>
+   &nbsp; &nbsp;
+   <%= link_to 'Back', root_path %>
+   &nbsp; &nbsp;
+   <%= link_to "New", posts_new_title_path %>
  </footer>
 </div>
+
+

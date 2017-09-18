@@ -1,0 +1,42 @@
+<style>
+    .container{
+        margin-top : 50px;
+        vertical-align : middle;
+        height: 100%;
+        
+    }
+    
+    .input-field{
+        margin-top:10px;
+    }
+</style>
+
+<div class="container z-depth-1 col s4 offset-s4">
+    <%= form_tag('/posts/create_title', method: 'post') do %>
+        <div class="field">
+            <%= label_tag(:title, "Title") %>
+            <%= text_area_tag :title %>
+        </div>
+        
+        <div class="input-field col s12">
+            <select name="image_type">
+              <option value="notebook">notebook</option>
+              <option value="phone">phone</option>
+            </select>
+            
+            <label>Type</label>
+        </div>
+        
+        <div class="action">
+            <%= submit_tag("Next") %>
+        </div>
+    <% end %>
+    
+    
+</div>
+
+<script>
+     $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>

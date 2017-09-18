@@ -1,0 +1,46 @@
+<style>
+  html{
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  .img_notebook{
+      margin-top :20px;
+      width: 100%;
+      height: auto;
+  }
+ 
+  .tag_img_content{
+      width :50px;
+      height :auto;
+  }
+
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col s7">
+            <% @images.each do |image| %>
+                <div class="col s12">
+                    <%= image_tag image.image ,:class => "img_notebook materialboxed" %>
+                </div>
+            <% end %>
+        </div>
+        <div class="col s4 offset-s1">
+            <h6>Title:</h6>
+            <p><%= @post.title %></p>
+            <hr>
+            <h6>Description:</h6>
+            <p><%= sanitize @post.description %></p>
+            <hr>
+            <h6>Tools</h6>
+            <div class="img_tag">
+               <% @tags.each do |t| %>
+                    <div class="col s3">
+                       <%= image_tag tag_img(t), :class => "tag_img_content" %>
+                    </div>
+               <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+@import "summernote";
+@import "bootstrap";
+@import "materialize/components/color";
+$tabs-text-color: color("grey", "darken-4") !default;
+$tabs-underline-color: color("grey", "darken-4") !default;
+@import "materialize";
+
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+/*
+ *= require_tree .
+ *= require dropzone/dropzone
+ *= require_self
+ */

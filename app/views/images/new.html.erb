@@ -1,0 +1,10 @@
+<div class="container z-depth-1">
+  <%= form_for(@image, html: { multipart: true, class: "dropzone"}) do |f| %>
+    <input type="hidden" name="post_id" value = "<%= @post.id %>"> 
+    <div class="fallback">
+      <%= f.file_field :image %><br>
+      <%= f.submit "Upload my Image" %>
+    </div>
+  <% end %>
+  <btn><%= link_to 'Next', new_post_path %></btn>
+</div>

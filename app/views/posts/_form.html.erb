@@ -1,0 +1,33 @@
+<style>
+.check{
+  display: flex;
+  justify-content: space-around;
+}
+</style>
+<div class="container z-depth-1">
+  <%= form_for(post, html: {multipart: true }) do |f| %>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: :summernote%>
+    </div>
+    
+    <div class="check">
+      <p>
+      <input type="checkbox" id="test5" name="ruby" value="ruby" />
+      <label for="test5">Ruby</label>
+      </p>
+      <p>
+      <input type="checkbox" id="test4" name="illu" value="illu"/>
+      <label for="test4">Illustrate</label>
+      </p>
+      <p>
+      <input type="checkbox" id="test3" name="photoshop" value="photo"/>
+      <label for="test3">Photoshop</label>
+      </p>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

@@ -12,8 +12,11 @@
 //
 //= require rails-ujs
 
-//= require summernote
+
 //= require jquery
-//= require turbolinks
+//= require bootstrap
+//= require summernote
 //= require materialize-sprockets
+//= require dropzone
+//= require turbolinks
 //= require_tree .
