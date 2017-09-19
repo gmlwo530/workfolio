@@ -8,8 +8,8 @@ WorkFolio
 * bootstrap-sass
 * materialize
 * summernote-rails
-
-* DB : mysql
-
+**DB**
+mysql
+**Version**
 * ruby version : 2.3.4
 * rails version : 5.1.3
