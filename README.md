@@ -1,24 +1,15 @@
-# README
+WorkFolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+포트폴리오 편집 사이트입니다. (진행 중)
 
-Things you may want to cover:
+**gem**
+* carrierwave
+* fog-aws
+* bootstrap-sass
+* materialize
+* summernote-rails
 
-* Ruby version
+* DB : mysql
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ruby version : 2.3.4
+* rails version : 5.1.3
