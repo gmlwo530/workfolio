@@ -7,9 +7,9 @@ WorkFolio
 * fog-aws
 * bootstrap-sass
 * materialize
-* summernote-rails
+* summernote-rails <br/>
 **DB**
-mysql
+mysql <br/>
 **Version**
 * ruby version : 2.3.4
 * rails version : 5.1.3
