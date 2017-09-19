@@ -12,7 +12,7 @@ WorkFolio
 <br/>
 
 **DB**
-mysql <br/>
+* mysql <br/>
 
 **Version**
 * ruby version : 2.3.4
