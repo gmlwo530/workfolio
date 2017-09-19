@@ -62,5 +62,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'figaro'
 group :production do
   
-  gem 'mysql'
+  gem 'mysql2'
 end

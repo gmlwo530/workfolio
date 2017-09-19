@@ -138,7 +138,8 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.2)
-    mysql (2.9.1)
+    mysql2 (0.4.9)
+    mysql2 (0.4.9-x64-mingw32)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -269,7 +270,7 @@ DEPENDENCIES
   jquery-rails
   materialize-sass
   mini_magick
-  mysql
+  mysql2
   pg
   puma (~> 3.7)
   rails (~> 5.1.3)
