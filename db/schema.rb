@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170915044508) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "admins", force: :cascade do |t|
     t.string "password_digest"
     t.datetime "created_at", null: false
@@ -22,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170915044508) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string "image"
+    t.string "images"
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

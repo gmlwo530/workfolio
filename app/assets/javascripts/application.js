@@ -17,6 +17,8 @@
 //= require bootstrap
 //= require summernote
 //= require materialize-sprockets
-//= require dropzone
 //= require turbolinks
 //= require_tree .
+//
+//
+//

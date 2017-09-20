@@ -22,7 +22,9 @@
         <div class="col s7">
             <% @images.each do |image| %>
                 <div class="col s12">
-                    <%= image_tag image.image ,:class => "img_notebook materialboxed" %>
+			<% for i in 0 ..(image.images.length - 1) do %>	
+                   	 <%= image_tag image.images[i].url ,:class => "img_notebook materialboxed" %>
+			<% end %>
                 </div>
             <% end %>
         </div>

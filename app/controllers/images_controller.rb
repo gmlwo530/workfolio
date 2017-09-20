@@ -6,23 +6,22 @@ class ImagesController < ApplicationController
   
   def create
     
-    @image = Image.new(image: params[:file], post_id: params[:post_id])
+    @image = Image.new(image_params)
 
     if @image.save
-      render json: { message: "success", fileID: @image.id }, status: 200
+      redirect_to '/posts/new'
     else
       render json: { error: @image.errors.full_messages.join(',')}, status: 400
     end
   end
   
   def new
-    @images = Image.all
     @image = Image.new
   end
   
   private
   def image_params
-    params.require(:image).permit(:image)
+    params.require(:image).permit(:post_id, {images: []})
   end
   
   def post_id
